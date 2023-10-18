@@ -28,5 +28,10 @@ This project has been developed using the following technologies:
 
 This project is under the MIT License. Please refer to the [LICENSE](LICENSE) file for more details.
 
-Thank you for using my Purchase Inventory Management System! If you have any questions or need assistance, please feel free to contact me.
+## Contact
+
+If you have questions, suggestions, or comments, don't hesitate to get in touch with me. You can reach me at my social media.
+
+## Farewell
+I hope you find this repository useful for learning and practicing. If you have any questions or need assistance, please feel free to contact me. Enjoy exploring my GitHub profile!
 
