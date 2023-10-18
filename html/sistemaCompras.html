@@ -1,0 +1,51 @@
+<!-- Programa desarrollado por Jose Alejandro Briones Arroyo el 19 de septiembre de 2023 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Compras</title>
+        <!-- Enlace a la hoja de estilos CSS -->
+        <link rel="stylesheet" href="/css/stylesCompras.css" />
+    </head>
+    <body>
+        <div style="text-align: center">
+            <h1>Sistema de Compras</h1>
+
+            <!-- Formulario para agregar productos -->
+            <form id="formulario">
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" required autocomplete="off" />
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required step="0.01" />
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" required min="1" step="1" />
+
+                <br /><br />
+                <!-- Botón para agregar producto, que llama a la función 'agregarProducto' en el archivo JavaScript -->
+                <button type="button" onclick="agregarProducto()">Añadir Producto</button>
+            </form>
+
+            <h2>Productos:</h2>
+            <!-- Lista donde se mostrarán los productos agregados -->
+            <ul id="listaProductos"></ul>
+        </div>
+
+        <div style="text-align: center">
+            <!-- Botón para calcular el total de la compra, que llama a la función 'calcularTotal' en el archivo JavaScript -->
+            <button type="button" onclick="calcularTotal()">Calcular</button>
+            <!-- Mostrará el total de la Compra aquí -->
+            <p>Total de la Compra: $<span id="totalCompra">0.00</span></p>
+        </div>
+
+        <footer>
+            <!-- Información del autor -->
+            <p>Jose Alejandro Briones Arroyo - 220103</p>
+        </footer>
+
+        <!-- Inclusión del archivo JavaScript que contiene las funciones de la aplicación -->
+        <script src="/js/sistemaCompras.js"></script>
+    </body>
+</html>

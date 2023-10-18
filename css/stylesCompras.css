@@ -1,0 +1,211 @@
+/* Programa desarrollado por Jose Alejandro Briones Arroyo el 19 de septiembre de 2023 */
+
+/* Estilo general del cuerpo de la página */
+body {
+    /* Configuración del cuerpo como un contenedor flexible con alineación centrada y fondo de color. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    /* Define el contenedor principal con ancho máximo, fondo y sombra. */
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Estilo del título "Sistema de Compras" */
+h1 {
+    /* Configura el título con color, tamaño de fuente, alineación y efectos de texto. */
+    color: #007bff;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* Estilo del formulario */
+form {
+    /* Alineación del contenido del formulario al centro. */
+    text-align: center;
+}
+
+/* Estilo de los campos de entrada de texto y número */
+input[type="text"],
+input[type="number"] {
+    /* Configuración de los campos de entrada con ancho, borde y transiciones. */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    transition: border-bottom 0.3s;
+}
+
+/* Estilo para resaltar el cuadro de entrada de texto cuando se enfoca */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-bottom: 2px solid #45a049; /* Cambia el color al enfocar */
+}
+
+/* Estilo de las etiquetas de texto arriba de las cajas de diálogo */
+label {
+    /* Configuración de las etiquetas de texto con negrita, tamaño de fuente, color y formato. */
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de cada elemento de la lista de productos */
+li {
+    /* Configuración de los elementos de la lista con fondo, borde y sombra. */
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilo del botón de edición dentro de los elementos de la lista */
+button.editar-btn {
+    position: absolute; /* Agrega posicionamiento absoluto a los botones */
+    right: 95px;
+}
+
+/* Estilo del total de compra */
+#totalCompra {
+    /* Configuración del total de compra con tamaño de fuente, color, alineación y apariencia. */
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del botón para agregar productos */
+button[type="button"] {
+    /* Configuración del botón de agregar con colores, borde, texto, cursor y transición. */
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+/* Estilo del pie de página con el nombre */
+footer {
+    /* Alineación y configuración del pie de página con colores y texto. */
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Estilo del párrafo dentro del pie de página */
+footer p {
+    /* Configuración del párrafo del pie de página con tamaño de fuente, margen y efectos de texto. */
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+/* Estilo mejorado del botón de eliminación al pasar el cursor */
+button.eliminar-btn:hover {
+    /* Cambia el color de fondo y agrega sombra al pasar el cursor sobre el botón de eliminación. */
+    background-color: #ff3338;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los botones "Editar" y "Guardar" */
+button.editar-btn,
+button.guardar-btn {
+    /* Configuración de los botones "Editar" y "Guardar" con colores, tamaño de fuente, sombra y transición. */
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo cuando se pasa el cursor sobre los botones "Editar" y "Guardar" */
+button.editar-btn:hover,
+button.guardar-btn:hover {
+    /* Cambia el color de fondo y agrega sombra al pasar el cursor sobre los botones "Editar" y "Guardar". */
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los botones "Eliminar" y "Cancelar" */
+button.eliminar-btn,
+button.cancelar-btn {
+    /* Configuración de los botones "Eliminar" y "Cancelar" con colores, tamaño de fuente, sombra y transición. */
+    background-color: #f44336;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo cuando se pasa el cursor sobre los botones "Eliminar" y "Cancelar" */
+button.eliminar-btn:hover,
+button.cancelar-btn:hover {
+    /* Cambia el color de fondo y agrega sombra al pasar el cursor sobre los botones "Eliminar" y "Cancelar". */
+    background-color: #d32f2f;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón de agregar al pasar el cursor */
+button[type="button"]:hover {
+    background-color: #0066ff;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
